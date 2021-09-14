@@ -1,0 +1,31 @@
+
+
+Options -Indexes
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^sindfazenda\.com\.br$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.sindfazenda\.com\.br$
+RewriteRule ^/?$ "https\:\/\/sindfazenda\.com\.br\/public\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^sindfazenda\.com\.br$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.sindfazenda\.com\.br$
+RewriteRule ^alan\-augusto\-dos\-reis$ "https\:\/\/sindfazenda\.com\.br\/public\/diretoria\-executiva\/alan\-augusto\-dos\-reis" [R=301,L]
+RewriteCond %{HTTP_HOST} ^sindfazenda\.com\.br$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.sindfazenda\.com\.br$
+RewriteRule ^euripedes\-rosa\-do\-nascimento\-junior$ "https\:\/\/sindfazenda\.com\.br\/public\/diretoria\-executiva\/euripedes\-rosa\-do\-nascimento\-junior" [R=301,L]
+
+<Files ~ "^.*\.([Ee][Nn][Vv])">
+ order allow,deny
+ deny from all
+ satisfy all
+</Files>
+
+# # php -- BEGIN cPanel-generated handler, do not edit
+# # Defina o pacote “ea-php73” como a linguagem padrão de programação “PHP”.
+# <IfModule mime_module>
+#   AddHandler application/x-httpd-ea-php73 .php .php7 .phtml
+# </IfModule>
+# # php -- END cPanel-generated handler, do not edit
+RewriteCond %{HTTP_HOST} ^sindfazenda\.org\.br$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.sindfazenda\.org\.br$
+RewriteRule ^/?$ "https\:\/\/www\.sindfazenda\.com\.br\/public\/" [R=301,L]
+
